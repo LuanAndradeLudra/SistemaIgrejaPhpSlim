@@ -1,0 +1,35 @@
+<div class="card col-12">
+    <div class="card-header">
+      <span style="font-size: 18px; margin-top: 10px;"><b>Relação de aniversariantes de casamento do mês de {function="mesExtenso($mes)"}</b></span> &nbsp;
+        <span id="botaoImprimir">
+          <button class="btn btn-default" onclick="imprimir()"><i class="fas fa-print"></i>&nbsp;Imprimir</button>
+        </span><br />
+        <small>Data de hoje: {function="dataAtual()"}</small>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body p-0 mb-4">
+      <table class="table table-striped">
+          <tr style="background-color: white">
+            <th>Data</th>
+            <th style="width: 40%;">Nome</th>
+            <th>Cargo</th>
+            <th>Telefone</th>
+            <th>Celular</th>
+          </tr>
+        <tbody>
+          {loop="$aniversariantes"}
+          <tr>
+            <td>{$value.dataCasamentoMembro}</td>
+            <td>{$value.nomeMembro}</td>
+            <td>{$value.cargoMinisterialMembro}</td>
+            <td>{$value.telefoneMembro}</td>
+            <td>{$value.celularMembro}</td>
+          </tr>
+          {/loop}
+        </tbody>
+      </table>
+    </div>
+    <!-- /.card-body -->
+
+
+</div>
